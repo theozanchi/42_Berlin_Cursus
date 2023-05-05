@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 17:11:48 by tzanchi          ###   ########.fr       */
+/*   Created: 2023/05/05 10:48:31 by tzanchi           #+#    #+#             */
+/*   Updated: 2023/05/05 10:52:16 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <stdint.h>
+int	static_strlen(const char *str)
+{
+	int	length;
 
-#endif
+	length = 0;
+	while (*str++)
+		length++;
+	return (length);
+}
+
+char	*ft_strrchr(const char *str, int c)
+{
+	int		length;
+	char	*ptr;
+
+	length = static_strlen(str);
+	ptr = (char *)str + length;
+	while (length && *ptr != c)
+	{
+		length--;
+		ptr--;
+	}
+	if (*ptr == c)
+		return (ptr);
+	else
+		return (NULL);
+}

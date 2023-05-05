@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 17:11:48 by tzanchi          ###   ########.fr       */
+/*   Created: 2023/05/05 11:16:17 by tzanchi           #+#    #+#             */
+/*   Updated: 2023/05/05 11:59:28 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <stdint.h>
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned char	*ptr;
 
-#endif
+	ptr = (unsigned char *)s;
+	while (n && *ptr != c)
+	{
+		ptr++;
+		n--;
+	}
+	if (n)
+		return (ptr);
+	else
+		return (NULL);
+}

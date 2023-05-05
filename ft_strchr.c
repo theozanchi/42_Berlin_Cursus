@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 17:11:48 by tzanchi          ###   ########.fr       */
+/*   Created: 2023/05/05 10:37:03 by tzanchi           #+#    #+#             */
+/*   Updated: 2023/05/05 10:47:55 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <stdint.h>
+char	*ft_strchr(const char *str, int c)
+{
+	char	*ptr;
 
-#endif
+	ptr = (char *)str;
+	while (*ptr && *ptr != c)
+		ptr++;
+	if (*ptr == c)
+		return (ptr);
+	else
+		return (NULL);
+}
