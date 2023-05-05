@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 17:14:29 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 17:21:35 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/05 17:28:56 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *str)
 	dup = malloc((static_strlen(str) + 1) * sizeof(char));
 	if (dup == NULL)
 		return (NULL);
-	str_ptr = str;
+	str_ptr = (char *)str;
 	dup_ptr = dup;
 	while (*str_ptr)
 	{

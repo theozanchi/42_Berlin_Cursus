@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:05:04 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 12:30:36 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/05 17:26:57 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	little_len = static_strlen(little);
 	big_ptr = (char *)big;
-	while (*big_ptr && len >= little_len)
+	while (*big_ptr && len >= (size_t)little_len)
 	{
 		if (static_strncmp(big_ptr, little, little_len) == 0)
 			return (big_ptr);
