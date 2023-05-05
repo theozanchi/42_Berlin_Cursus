@@ -6,15 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:05:04 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 17:26:57 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/05 20:31:23 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	static_strlen(const char *str)
+size_t	static_strlen(const char *str)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	while (*str++)
@@ -43,14 +43,14 @@ int	static_strncmp(const char *s1, const char *s2, size_t n)
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		little_len;
+	size_t	little_len;
 	char	*big_ptr;
 
 	if (!*little)
 		return ((char *)big);
 	little_len = static_strlen(little);
 	big_ptr = (char *)big;
-	while (*big_ptr && len >= (size_t)little_len)
+	while (*big_ptr && len >= little_len)
 	{
 		if (static_strncmp(big_ptr, little, little_len) == 0)
 			return (big_ptr);

@@ -6,13 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:33:50 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/03 14:54:35 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/05 20:30:18 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	while (*str++)

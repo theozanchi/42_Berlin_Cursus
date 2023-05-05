@@ -6,15 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 17:14:29 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 17:28:56 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/05 20:41:41 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	static_strlen(const char *str)
+size_t	static_strlen(const char *str)
 {
-	int	length;
+	size_t	length;
 
 	length = 0;
 	while (*str++)

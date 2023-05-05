@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:47:19 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/03 15:12:07 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/05 19:03:15 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_bzero(void *s, size_t n)
 
 	ptr = (unsigned char *)s;
 	while (n--)
-		*ptr = 0;
+		*(ptr++) = 0;
 }
