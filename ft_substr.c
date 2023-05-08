@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 17:14:29 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/08 17:21:04 by tzanchi          ###   ########.fr       */
+/*   Created: 2023/05/08 11:11:53 by tzanchi           #+#    #+#             */
+/*   Updated: 2023/05/08 17:33:28 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,28 @@ static size_t	static_strlen(const char *str)
 	return (length);
 }
 
-char	*ft_strdup(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*dup;
-	char	*dup_ptr;
+	char	*output;
+	char	*output_ptr;
 
-	dup = malloc((static_strlen(str) + 1) * sizeof(char));
-	if (dup == NULL)
-		return (NULL);
-	dup_ptr = dup;
-	while (*str)
+	if (start >= static_strlen(s))
 	{
-		*dup_ptr = *str;
-		str++;
-		dup_ptr++;
+		output = malloc(1 * sizeof(char));
+		if (output == NULL)
+			return (NULL);
+		*output = '\0';
+		return (output);
 	}
-	*dup_ptr = '\0';
-	return (dup);
+	if (len > static_strlen(s) - start)
+		len = static_strlen(s) - start;
+	output = malloc((len + 1) * sizeof(char));
+	if (output == NULL)
+		return (NULL);
+	output_ptr = output;
+	s += start;
+	while (*s && len--)
+		*output_ptr++ = *s++;
+	*output_ptr = '\0';
+	return (output);
 }

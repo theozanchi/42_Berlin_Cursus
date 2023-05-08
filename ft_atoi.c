@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:40:01 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/08 12:15:46 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/08 17:13:23 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,23 @@ static int	static_isdigit(int c)
 
 int	ft_atoi(const char *nptr)
 {
-	char	*ptr;
 	int		sign;
 	int		result;
 
-	ptr = (char *)nptr;
 	sign = 1;
 	result = 0;
-	while (static_isspace(*ptr))
-		ptr++;
-	if (*ptr == '+' || *ptr == '-')
+	while (static_isspace(*nptr))
+		nptr++;
+	if (*nptr == '+' || *nptr == '-')
 	{
-		if (*ptr == '-')
+		if (*nptr == '-')
 			sign *= -1;
-		ptr++;
+		nptr++;
 	}
-	while (static_isdigit(*ptr))
+	while (static_isdigit(*nptr))
 	{
-		result = result * 10 + *ptr - '0';
-		ptr++;
+		result = result * 10 + *nptr - '0';
+		nptr++;
 	}
 	return (result * sign);
 }
