@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 10:37:03 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 10:47:55 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/08 16:32:58 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strchr(const char *str, int c)
 	char	*ptr;
 
 	ptr = (char *)str;
-	while (*ptr && *ptr != c)
+	while (*ptr && (unsigned char)*ptr != (unsigned char)c)
 		ptr++;
-	if (*ptr == c)
+	if ((unsigned char)*ptr == (unsigned char)c)
 		return (ptr);
 	else
 		return (NULL);

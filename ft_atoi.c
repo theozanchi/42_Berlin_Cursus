@@ -6,11 +6,11 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:40:01 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 16:25:53 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/08 12:15:46 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	static_isspace(int c)
+static int	static_isspace(int c)
 {
 	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);
@@ -18,7 +18,7 @@ int	static_isspace(int c)
 		return (0);
 }
 
-int	static_isdigit(int c)
+static int	static_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

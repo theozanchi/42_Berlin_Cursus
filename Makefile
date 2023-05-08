@@ -6,13 +6,13 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/05/05 17:24:03 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/05/08 11:52:31 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC		= cc
-CFLAGS	= -Wall -Wextra -Werror
-LIB		= libft.a
+CC		=	cc
+CFLAGS	=	-Wall -Wextra -Werror
+NAME	=	libft.a
 
 SRCS	=	ft_isalpha.c \
 			ft_isdigit.c \
@@ -39,22 +39,22 @@ SRCS	=	ft_isalpha.c \
 			ft_calloc.c \
 			ft_strdup.c
 
-OBJS	= ${SRCS:.c=.o}
+OBJS	=	${SRCS:.c=.o}
 
-all:	${LIB}
+all:		${NAME}
 
-${LIB}:	${OBJS}
-		ar rcs ${LIB} ${OBJS}
+${NAME}:	${OBJS}
+			ar rcs ${NAME} ${OBJS}
 
 .c.o:
-		${CC} ${CFLAGS} -c $< -o $@
+			${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-		rm -f ${OBJS}
+			rm -f ${OBJS}
 
-fclean:	clean
-		rm -f ${LIB}
+fclean:		clean
+			rm -f ${NAME}
 
-re:		fclean all
+re:			fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:		all clean fclean re

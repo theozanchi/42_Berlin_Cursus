@@ -6,13 +6,13 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 16:28:21 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 20:40:02 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/08 12:25:30 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*static_memset(void *s, int c, size_t n)
+static void	*static_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 
@@ -22,7 +22,7 @@ void	*static_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 	size_t	total_size;

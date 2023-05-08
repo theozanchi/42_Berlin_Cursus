@@ -6,13 +6,13 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:05:04 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/05 20:31:23 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/08 12:17:21 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	static_strlen(const char *str)
+static size_t	static_strlen(const char *str)
 {
 	size_t	length;
 
@@ -22,7 +22,7 @@ size_t	static_strlen(const char *str)
 	return (length);
 }
 
-int	static_strncmp(const char *s1, const char *s2, size_t n)
+static int	static_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ptr1;
 	unsigned char	*ptr2;
