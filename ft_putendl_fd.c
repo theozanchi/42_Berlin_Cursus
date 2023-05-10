@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:32:28 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/09 17:35:38 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/10 10:42:51 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while (*s)
-		write(fd, s++, 1);
-	write(fd, "\n", 1);
+	if (fd >= 0)
+	{
+		while (*s)
+			write(fd, s++, 1);
+		write(fd, "\n", 1);
+	}
 }

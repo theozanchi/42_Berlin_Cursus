@@ -6,21 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 15:40:01 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/08 17:13:23 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/10 15:14:55 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	static_isspace(int c)
+#include "libft.h"
+
+static int	ft_isspace(int c)
 {
 	if (c == ' ' || (c >= 9 && c <= 13))
-		return (1);
-	else
-		return (0);
-}
-
-static int	static_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);
@@ -33,18 +27,24 @@ int	ft_atoi(const char *nptr)
 
 	sign = 1;
 	result = 0;
-	while (static_isspace(*nptr))
+	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
 	{
-		if (*nptr == '-')
+		if (*nptr++ == '-')
 			sign *= -1;
-		nptr++;
 	}
-	while (static_isdigit(*nptr))
+	while (ft_isdigit(*nptr))
 	{
-		result = result * 10 + *nptr - '0';
-		nptr++;
+		if (result > INT_MAX / 10
+			|| (result == INT_MAX / 10 && *nptr - '0' > INT_MAX % 10))
+		{
+			if (sign == 1)
+				return (INT_MAX);
+			else
+				return (INT_MIN);
+		}
+		result = result * 10 + *nptr++ - '0';
 	}
 	return (result * sign);
 }

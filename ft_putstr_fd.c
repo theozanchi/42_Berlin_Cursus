@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:09:07 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/09 17:26:04 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/10 10:42:34 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		write(fd, s++, 1);
+	if (fd >= 0)
+	{
+		while (*s)
+			write(fd, s++, 1);
+	}
 }
