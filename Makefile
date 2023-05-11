@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/05/10 13:46:25 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/05/11 13:18:43 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ BONUS_SRCS	=	ft_lstnew.c \
 
 BONUS_OBJS	=	${BONUS_SRCS:.c=.o}
 
-all:		${NAME}
+all:		${NAME} bonus
 
 ${NAME}:	${OBJS}
 			ar rcs ${NAME} ${OBJS}
@@ -73,7 +73,7 @@ ${NAME}:	${OBJS}
 			${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-			rm -f ${OBJS}
+			rm -f ${OBJS} ${BONUS_OBJS}
 
 fclean:		clean
 			rm -f ${NAME}
