@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/05/11 13:18:43 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/05/19 16:47:54 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS		=	ft_isalpha.c \
 				ft_isalnum.c \
 				ft_isascii.c \
 				ft_isprint.c \
+				ft_isspace.c \
 				ft_strlen.c \
 				ft_memset.c \
 				ft_bzero.c \
@@ -48,11 +49,8 @@ SRCS		=	ft_isalpha.c \
 				ft_putchar_fd.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
-				ft_putnbr_fd.c
-
-OBJS		=	${SRCS:.c=.o}
-
-BONUS_SRCS	=	ft_lstnew.c \
+				ft_putnbr_fd.c \
+				ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
@@ -62,9 +60,9 @@ BONUS_SRCS	=	ft_lstnew.c \
 				ft_lstiter.c \
 				ft_lstmap.c
 
-BONUS_OBJS	=	${BONUS_SRCS:.c=.o}
+OBJS		=	${SRCS:.c=.o}
 
-all:		${NAME} bonus
+all:		${NAME}
 
 ${NAME}:	${OBJS}
 			ar rcs ${NAME} ${OBJS}
@@ -73,14 +71,11 @@ ${NAME}:	${OBJS}
 			${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-			rm -f ${OBJS} ${BONUS_OBJS}
+			rm -f ${OBJS}
 
 fclean:		clean
 			rm -f ${NAME}
 
-bonus:		${BONUS_OBJS}
-			ar rcs ${NAME} ${BONUS_OBJS}
-
 re:			fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re

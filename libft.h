@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 16:04:33 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/19 17:05:29 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@
 # include <stdint.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdarg.h>
+
+# define DEC_BASE "0123456789"
+# define HEX_BASE_LOW "0123456789abcdef"
+# define HEX_BASE_UP "0123456789ABCDEF"
+# define POINTER_PREFIX "0x"
+# define NULL_DISPLAY "(null)"
+# define NIL_DISPLAY "(nil)"
 
 typedef struct s_list
 {
@@ -31,6 +39,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 size_t	ft_strlen(const char *str);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -70,5 +79,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+int		ft_printf(const char *s, ...);
+size_t	putchar_count(int c);
+size_t	putstr_count(char *s);
+size_t	putnbr_base_count(int nbr, char *base);
+size_t	putunbr_base_count(unsigned int nbr, char *base);
+size_t	putptr_base_count(void *ptr, char *base, int first_loop_flag);
 
 #endif
