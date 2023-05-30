@@ -6,12 +6,14 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:29:02 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 12:33:46 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:01:08 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_lstnew allocates and returns a new node, initializes the content to
+’content’ and ’next’ to NULL*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;

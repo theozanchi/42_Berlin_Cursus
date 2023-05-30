@@ -6,12 +6,13 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 16:52:58 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:11:46 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:19:38 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_striteri applies the function ’f’ on each character of the string 's'*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	index;

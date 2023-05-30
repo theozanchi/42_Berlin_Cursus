@@ -6,12 +6,13 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:37:48 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:11:11 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:06:26 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_putnbr_fd outputs the integer 'n' to the given file descriptor 'fd'*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	long_n;

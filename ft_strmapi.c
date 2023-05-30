@@ -6,12 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 16:41:50 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:12:24 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:25:26 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_strmapi allocates and returns a new string resulting of successive
+applications of the function ’f’ to each character of the string ’s’, or NULL if
+the allocation fails*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	length;

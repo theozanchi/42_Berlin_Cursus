@@ -6,12 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 16:57:13 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/19 17:00:17 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:04:18 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*display_data is a helper function for ft_printf that displays the data of the
+va_list 'ap' using the correct writer function. It returns the number of
+characters displayed*/
 static size_t	display_data(char specifier, va_list ap)
 {
 	size_t	count;
@@ -36,6 +39,9 @@ static size_t	display_data(char specifier, va_list ap)
 	return (count);
 }
 
+/*ft_printf uses the format string 's' to print the arguments like the standard
+printf function. ft_printf only works with specifiers cspduxX% and returns the
+number of characters displayed*/
 int	ft_printf(const char *s, ...)
 {
 	va_list	ap;

@@ -6,12 +6,14 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:13:25 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:55:01 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:13:33 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*word_count returns the number of words in the string 's', each word being
+delimited by the character 'c'*/
 static size_t	words_count(const char *s, char c)
 {
 	size_t	count;
@@ -35,6 +37,8 @@ static size_t	words_count(const char *s, char c)
 	return (count);
 }
 
+/*word_length returns the length of the first word in the string 's', each word
+being delimited by the character 'c'*/
 static size_t	word_length(const char *s, char c)
 {
 	size_t	length;
@@ -48,6 +52,9 @@ static size_t	word_length(const char *s, char c)
 	return (length);
 }
 
+/*write_word allocates memory for a string in the array 'dest' and writes the
+first word contained in 'src', each word being delimited by the character 'c'.
+write_word returns 1 on success and 0 on failure*/
 static int	write_word(const char *src, char **dest, char c)
 {
 	char	*tmp;
@@ -62,6 +69,8 @@ static int	write_word(const char *src, char **dest, char c)
 	return (1);
 }
 
+/*free_output frees all the strings of 'output' from the string pointed by 'ptr'
+up to the beginning of output and then frees the array 'output'*/
 static void	free_output(char **output, char **ptr)
 {
 	while (ptr-- != output)
@@ -69,6 +78,8 @@ static void	free_output(char **output, char **ptr)
 	free(output);
 }
 
+/*ft_split allocates and returns an array of strings obtained by splitting ’s’
+using the character ’c’ as a delimiter, the array ending with a NULL pointer.*/
 char	**ft_split(char const *s, char c)
 {
 	char	**output;

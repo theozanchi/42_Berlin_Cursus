@@ -6,12 +6,15 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 11:11:53 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:13:25 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:33:34 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_substr allocates and returns a substring from the string ’s’, the substring
+begins at index ’start’ and is of maximum size ’len’. ft_substr returns NULL if
+the allocation fails*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*output;

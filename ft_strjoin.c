@@ -6,12 +6,14 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 16:55:35 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:12:00 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:20:21 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_strjoin allocates and returns a new string, which is the result of the
+concatenation of ’s1’ and ’s2’*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*output;

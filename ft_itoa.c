@@ -6,12 +6,14 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 15:59:39 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/09 16:39:26 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 14:22:17 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*get_str_length returns the number of digits of an integer, including the minus
+sign when the integer is negative*/
 static size_t	get_str_length(int n)
 {
 	size_t	length;
@@ -28,6 +30,8 @@ static size_t	get_str_length(int n)
 	return (length);
 }
 
+/*ft_itoa allocates and returns a string representing the integer received as an
+argument, NULL if the allocation fails*/
 char	*ft_itoa(int n)
 {
 	int		length;

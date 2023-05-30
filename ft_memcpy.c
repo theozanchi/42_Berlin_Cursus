@@ -6,12 +6,14 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:51:30 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/08 16:36:53 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 14:36:31 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_memcpy copies n bytes from memory area 'src' to memory area 'dest'. The
+memory areas must not overlap.*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest_ptr;

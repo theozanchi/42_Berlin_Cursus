@@ -6,12 +6,14 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 10:48:31 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 15:12:58 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 15:29:38 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_strrchr returns a pointer to the last occurrence of the character 'c' in
+the string 's', or NULL if 'c' is not found*/
 char	*ft_strrchr(const char *str, int c)
 {
 	int		length;

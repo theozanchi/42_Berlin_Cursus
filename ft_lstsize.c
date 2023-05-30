@@ -6,12 +6,13 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 12:42:37 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/10 12:48:11 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 14:31:47 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*ft_lstsize returns the number of nodes in the list 'lst'*/
 int	ft_lstsize(t_list *lst)
 {
 	int	size;
