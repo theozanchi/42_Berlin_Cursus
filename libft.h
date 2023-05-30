@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/05/19 17:05:29 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/05/30 17:27:35 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@
 # define POINTER_PREFIX "0x"
 # define NULL_DISPLAY "(null)"
 # define NIL_DISPLAY "(nil)"
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif
 
 typedef struct s_list
 {
@@ -85,5 +93,6 @@ size_t	putstr_count(char *s);
 size_t	putnbr_base_count(int nbr, char *base);
 size_t	putunbr_base_count(unsigned int nbr, char *base);
 size_t	putptr_base_count(void *ptr, char *base, int first_loop_flag);
+char	*get_next_line(int fd);
 
 #endif
