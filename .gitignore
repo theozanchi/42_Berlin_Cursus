@@ -1,3 +1,4 @@
-*.json
 *.a
+*.o
 main.c
+.vscode
