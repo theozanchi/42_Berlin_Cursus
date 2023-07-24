@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/07/24 18:14:07 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/07/24 18:50:03 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,8 +55,8 @@ SRCS		=	ft_isalpha.c \
 				get_next_line.c \
 				ft_min.c \
 				ft_max.c \
-				ft_deg_to_rad.c \
-				ft_rad_to_deg.c
+				ft_rad.c \
+				ft_deg.c
 
 OBJS		=	${SRCS:.c=.o}
 
