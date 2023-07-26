@@ -6,13 +6,20 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/07/24 18:50:03 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/07/26 14:49:06 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 NAME		=	libft.a
+
+# Colours and symbols
+GREEN		=	\033[1;32m
+CYAN		=	\033[1;36m
+PURPLE		=	\033[1;35m
+NC			=	\033[0m
+TICK		=	✓
 
 SRCS		=	ft_isalpha.c \
 				ft_isdigit.c \
@@ -59,21 +66,30 @@ SRCS		=	ft_isalpha.c \
 				ft_deg.c
 
 OBJS		=	${SRCS:.c=.o}
+SRC_NR		=	$(words ${SRCS})
 
-all:		${NAME}
+all:			${NAME}
 
-${NAME}:	${OBJS}
-			ar rcs ${NAME} ${OBJS}
+${NAME}:		entry_message ${OBJS}
+				@echo " ${GREEN}DONE${NC}"
+				@ar rcs ${NAME} ${OBJS} && echo "${CYAN}Creating ${NAME} archive file${NC}"
+				@echo "${PURPLE}${NAME} created${NC}"
 
 .c.o:
-			${CC} ${CFLAGS} -c $< -o $@
+				@echo -n "${GREEN}${TICK}${NC}"
+				@${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-			rm -f ${OBJS}
+				@echo "Removing all .o files"
+				@rm -f ${OBJS}
 
-fclean:		clean
-			rm -f ${NAME}
+fclean:			clean
+				@echo "Removing ${NAME} archive file"
+				@rm -f ${NAME}
 
-re:			fclean all
+re:				fclean all
 
-.PHONY:		all clean fclean re
+entry_message:
+				@echo "${CYAN}Compilation of ${SRC_NR} files of the library:${NC}"
+
+.PHONY:			all clean fclean re
