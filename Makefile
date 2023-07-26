@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/07/26 19:04:52 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/07/26 19:35:33 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,8 +88,13 @@ $(OBJ_DIR)/%.o: %.c
 				@${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-				@echo "Removing all .o files"
-				@rm -r ${OBJ_DIR}
+			@if [ ! -d "${OBJ_DIR}" ]; \
+			then \
+				echo "Repo already clean"; \
+			else \
+				echo "Removing all .o files"; \
+				rm -r ${OBJ_DIR}; \
+			fi
 
 fclean:			clean
 				@echo "Removing ${NAME} archive file"
