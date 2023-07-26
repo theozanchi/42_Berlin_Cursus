@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/07/26 14:55:58 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/07/26 19:04:52 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,23 +65,31 @@ SRCS		=	ft_isalpha.c \
 				ft_rad.c \
 				ft_deg.c
 
-OBJS		=	${SRCS:.c=.o}
 SRC_NR		=	$(words ${SRCS})
 
-all:			${NAME}
+OBJS		=	$(addprefix ${OBJ_DIR}/, $(notdir $(SRCS:.c=.o)))
+OBJ_DIR		=	.o
+
+all:			${OBJ_DIR} ${NAME}
 
 ${NAME}:		entry_message ${OBJS}
 				@echo " ${GREEN}DONE${NC}"
 				@ar rcs ${NAME} ${OBJS} && echo "${CYAN}Creating ${NAME} archive file${NC}"
 				@echo "${PURPLE}${NAME} created${NC}"
 
-.c.o:
+${OBJ_DIR}:
+				@if [ ! -d "${OBJ_DIR}" ]; \
+				then mkdir -p "${OBJ_DIR}"; \
+				fi
+
+
+$(OBJ_DIR)/%.o: %.c
 				@echo -n "${GREEN}${TICK}${NC}"
 				@${CC} ${CFLAGS} -c $< -o $@
 
 clean:
 				@echo "Removing all .o files"
-				@rm -f ${OBJS}
+				@rm -r ${OBJ_DIR}
 
 fclean:			clean
 				@echo "Removing ${NAME} archive file"
