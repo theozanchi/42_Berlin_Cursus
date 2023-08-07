@@ -6,13 +6,13 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 15:48:05 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/08/07 15:48:21 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/08/07 15:49:52 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-float	ft_max(float a, float b)
+float	ft_max_float(float a, float b)
 {
 	if (a >= b)
 		return (a);
