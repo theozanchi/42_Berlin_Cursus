@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/08/07 15:49:59 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/08/09 12:55:44 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,6 @@ float	ft_rad(float theta_deg);
 float	ft_deg(float theta_rad);
 float	ft_min_float(float a, float b);
 float	ft_max_float(float a, float b);
+void	ft_swap(int *a, int *b);
 
 #endif
