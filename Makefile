@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/08/09 12:55:34 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/08/15 16:16:52 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,8 @@ SRCS		=	ft_isalpha.c \
 				ft_deg.c \
 				ft_min_float.c \
 				ft_max_float.c \
-				ft_swap.c
+				ft_swap.c \
+				ft_strtoui.c
 
 SRC_NR		=	$(words ${SRCS})
 
