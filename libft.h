@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/08/15 16:19:20 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/08/24 15:03:30 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,5 +91,6 @@ float			ft_min_float(float a, float b);
 float			ft_max_float(float a, float b);
 void			ft_swap(int *a, int *b);
 unsigned int	ft_strtoui(char *str, int base);
+int				ft_printf_colour(char *colour, const char *s, ...);
 
 #endif
