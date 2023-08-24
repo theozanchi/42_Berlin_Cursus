@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 14:57:21 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/08/24 15:07:28 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/08/24 15:22:19 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_printf_colour(char *colour, const char *s, ...)
 
 	ft_printf("%s", colour);
 	va_start(ap, s);
+	va_arg(ap, char *);
 	printed_count = ft_printf(s, ap);
 	va_end(ap);
 	ft_printf("\033[0m");
