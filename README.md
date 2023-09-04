@@ -6,6 +6,7 @@
 
 The project is about creating its own library that will be used for the whole 42 curriculum. 
 The only external functions that are allowed are `write()`, `malloc()` and `free()`. 
+The full subject can be found [here](.media/en.subject.pdf).
 
 # Downloading and compiling the library
 
