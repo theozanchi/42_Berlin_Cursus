@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/08/30 10:47:22 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/09/12 15:41:08 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,9 +87,10 @@ ${OBJ_DIR}:
 				then mkdir -p "${OBJ_DIR}"; \
 				fi
 
-
 $(OBJ_DIR)/%.o: %.c
-				@echo -n "${GREEN}${TICK}${NC}"
+				@printf "${GREEN}"
+				@printf "%s" "${TICK}"
+				@printf "${NC}"
 				@${CC} ${CFLAGS} -c $< -o $@
 
 clean:
