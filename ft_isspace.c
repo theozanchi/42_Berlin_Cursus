@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*ft_isalnum returns 1 if character c is a space. Space includes space,
+/*ft_isspace returns 1 if character c is a space. Space includes space,
 form-feed\f, new line \n, carriage return \r, horizontal tab \t and  vertical
 tab\v*/
 int	ft_isspace(int c)
