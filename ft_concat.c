@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:50:16 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/11/13 12:13:00 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/11/13 12:30:47 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static size_t	get_final_length(size_t n, va_list ap)
 	va_copy(ap_copy, ap);
 	i = 0;
 	length = 0;
-	while (i < n)
+	while (i++ < n)
 		length += ft_strlen(va_arg(ap_copy, char *));
 	va_end(ap_copy);
 	return (length);
@@ -55,11 +55,8 @@ char	*ft_concat(size_t n, ...)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (i < n)
-	{
+	while (i++ < n)
 		j += add_string(&concat[j], va_arg(ap, char *));
-		i++;
-	}
 	va_end(ap);
 	concat[j] = '\0';
 	return (concat);
