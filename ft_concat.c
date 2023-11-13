@@ -6,12 +6,19 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:50:16 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/11/13 12:30:47 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/11/13 19:28:10 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief Get the length of the final string after concatenation
+ * 
+ * @param n Number of strings to concatenate
+ * @param ap Variadic list
+ * @return Total length of the concatenated string
+ */
 static size_t	get_final_length(size_t n, va_list ap)
 {
 	va_list	ap_copy;
@@ -27,6 +34,13 @@ static size_t	get_final_length(size_t n, va_list ap)
 	return (length);
 }
 
+/**
+ * @brief Adds the string src in the string dest, without NULL-terminating it
+ * 
+ * @param dest Destination string
+ * @param src Source string
+ * @return The number of characters copied
+ */
 static size_t	add_string(char *dest, char *src)
 {
 	size_t	i;
@@ -40,6 +54,13 @@ static size_t	add_string(char *dest, char *src)
 	return (i);
 }
 
+/**
+ * @brief Allocates memory and concatenates n strings
+ * 
+ * @param n The number of strings to concatenate
+ * @param ... All the strings to concatenate
+ * @return Pointer to the newly created string
+ */
 char	*ft_concat(size_t n, ...)
 {
 	va_list	ap;
