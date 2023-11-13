@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/09/12 17:22:42 by tzanchi          ###   ########.fr       */
+/*   Updated: 2023/11/13 11:02:42 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ unsigned int	ft_strtoui(char *str, int base);
 int				ft_printf_colour(char *colour, const char *s, ...);
 int				ft_isnumeric(char *str);
 size_t			get_char_arr_length(char **arr);
+char			*ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif

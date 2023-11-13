@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/09/12 17:22:59 by tzanchi          ###   ########.fr        #
+#    Updated: 2023/11/13 11:02:29 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,8 @@ SRCS		=	ft_isalpha.c \
 				ft_swap.c \
 				ft_strtoui.c \
 				ft_isnumeric.c \
-				get_char_arr_length.c
+				get_char_arr_length.c \
+				ft_strncpy.c
 
 SRC_NR		=	$(words ${SRCS})
 
