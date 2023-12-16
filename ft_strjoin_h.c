@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strjoin(char *s, char *buffer)
+char	*ft_strjoin_h(char *s, char *buffer)
 {
 	size_t	i;
 	size_t	j;

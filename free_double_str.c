@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   free_double_str.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helauren <helauren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 14:33:50 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/12/14 16:16:38 by helauren         ###   ########.fr       */
+/*   Created: 2023/09/05 13:52:05 by helauren          #+#    #+#             */
+/*   Updated: 2023/11/04 14:19:26 by helauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*ft_strlen returns the length of the string pointed by 'str'*/
-size_t	ft_strlen(const char *str)
+void	free_double_str(char **s)
 {
-	size_t	length;
+	int	i;
 
-	if(str == NULL)
-		return (0);
-	length = 0;
-	while (*str++)
-		length++;
-	return (length);
+	i = 0;
+	if (s == NULL)
+		return ;
+	while (s && s[i])
+	{
+		if (s[i] != NULL)
+		{
+			free(s[i]);
+			s[i] = NULL;
+		}
+		i++;
+	}
+	if (s != NULL)
+		free(s);
+	s = NULL;
 }
