@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2024/01/12 18:40:49 by tzanchi          ###   ########.fr       */
+/*   Updated: 2024/01/12 19:15:38 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,6 @@ char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_concat(size_t n, ...);
 void			free_and_set_to_null(size_t n, ...);
 int				same_sign_double(double a, double b);
+double			square(double x);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2024/01/12 18:40:26 by tzanchi          ###   ########.fr        #
+#    Updated: 2024/01/12 19:15:30 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,8 @@ SRCS		=	ft_isalpha.c \
 				ft_concat.c \
 				free_and_set_to_null.c \
 				free_double_str.c \
-				same_sign_double.c
+				same_sign_double.c \
+				square.c
 
 SRC_NR		=	$(words ${SRCS})
 
