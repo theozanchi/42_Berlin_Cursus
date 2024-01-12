@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: helauren <helauren@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/12/16 19:23:31 by helauren         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:40:49 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ size_t			get_char_arr_length(char **arr);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_concat(size_t n, ...);
 void			free_and_set_to_null(size_t n, ...);
+int				same_sign_double(double a, double b);
 
 #endif

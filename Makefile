@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: helauren <helauren@student.42.fr>          +#+  +:+       +#+         #
+#    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/12/16 19:23:51 by helauren         ###   ########.fr        #
+#    Updated: 2024/01/12 18:40:26 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,8 @@ SRCS		=	ft_isalpha.c \
 				ft_strncpy.c \
 				ft_concat.c \
 				free_and_set_to_null.c \
-				free_double_str.c 
+				free_double_str.c \
+				same_sign_double.c
 
 SRC_NR		=	$(words ${SRCS})
 
