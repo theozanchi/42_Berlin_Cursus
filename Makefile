@@ -6,7 +6,7 @@
 #    By: helauren <helauren@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2023/12/16 19:23:51 by helauren         ###   ########.fr        #
+#    Updated: 2024/01/08 21:12:10 by helauren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,8 @@ SRCS		=	ft_isalpha.c \
 				ft_strncpy.c \
 				ft_concat.c \
 				free_and_set_to_null.c \
-				free_double_str.c 
+				free_double_str.c \
+				free_triple_double.c \
 
 SRC_NR		=	$(words ${SRCS})
 

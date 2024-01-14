@@ -6,7 +6,7 @@
 /*   By: helauren <helauren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2023/12/16 19:23:31 by helauren         ###   ########.fr       */
+/*   Updated: 2024/01/08 21:12:48 by helauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@
 #  define FD_MAX 1024
 # endif
 
-void			free_double_str(char **s);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -99,5 +98,7 @@ size_t			get_char_arr_length(char **arr);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_concat(size_t n, ...);
 void			free_and_set_to_null(size_t n, ...);
+void			free_double_str(char **s);
+void			free_triple_double(double ***points, int x, int y);
 
 #endif
