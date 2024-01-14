@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: helauren <helauren@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/01/08 21:12:48 by helauren         ###   ########.fr       */
-=======
-/*   Updated: 2024/01/12 19:15:38 by tzanchi          ###   ########.fr       */
->>>>>>> 9f92dee4c8ac683a470727bdb3388949a080daa8
+/*   Updated: 2024/01/14 16:04:43 by helauren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,12 +98,9 @@ size_t			get_char_arr_length(char **arr);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
 char			*ft_concat(size_t n, ...);
 void			free_and_set_to_null(size_t n, ...);
-<<<<<<< HEAD
 void			free_double_str(char **s);
 void			free_triple_double(double ***points, int x, int y);
-=======
 int				same_sign_double(double a, double b);
 double			square(double x);
->>>>>>> 9f92dee4c8ac683a470727bdb3388949a080daa8
 
 #endif
