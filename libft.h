@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: helauren <helauren@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2024/01/14 16:04:43 by helauren         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:16:18 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ void			free_double_str(char **s);
 void			free_triple_double(double ***points, int x, int y);
 int				same_sign_double(double a, double b);
 double			square(double x);
+double			smallest_positive(size_t n, ...);
 
 #endif
