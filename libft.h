@@ -6,7 +6,7 @@
 /*   By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:03:46 by tzanchi           #+#    #+#             */
-/*   Updated: 2024/01/23 11:39:18 by tzanchi          ###   ########.fr       */
+/*   Updated: 2024/01/23 11:40:04 by tzanchi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ float			ft_rad(float theta_deg);
 float			ft_deg(float theta_rad);
 float			ft_min_float(float a, float b);
 float			ft_max_float(float a, float b);
-double			ft_min_float(double a, double b);
+double			ft_min_double(double a, double b);
 void			ft_swap(int *a, int *b);
 unsigned int	ft_strtoui(char *str, int base);
 int				ft_printf_colour(char *colour, const char *s, ...);
