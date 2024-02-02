@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2024/02/02 10:23:26 by tzanchi          ###   ########.fr        #
+#    Updated: 2024/02/02 10:55:55 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,9 +87,13 @@ OBJ_DIR		=	.o
 all:			${OBJ_DIR} ${NAME}
 
 ${NAME}:		entry_message ${OBJS}
-				@echo " ${GREEN}DONE${NC}"
-				@ar rcs ${NAME} ${OBJS} && echo "${CYAN}Creating ${NAME} archive file${NC}"
-				@echo "${PURPLE}${NAME} created${NC}"
+				@if [ -e ${NAME} ] && [ "$(shell find ${OBJ_DIR} -newer ${NAME})" = "" ]; then \
+					echo "Nothing to do"; \
+				else \
+					echo "${GREEN}DONE${NC}"; \
+					ar rcs ${NAME} ${OBJS} && echo "${CYAN}Creating ${NAME} archive file${NC}"; \
+					echo "${PURPLE}${NAME} created${NC}"; \
+				fi
 
 ${OBJ_DIR}:
 				@if [ ! -d "${OBJ_DIR}" ]; \
@@ -118,6 +122,6 @@ fclean:			clean
 re:				fclean all
 
 entry_message:
-				@echo "${CYAN}Compilation of ${SRC_NR} files of the library:${NC}"
+				@echo "${CYAN}${SRC_NR} files of the library:${NC}"
 
 .PHONY:			all clean fclean re entry_message
