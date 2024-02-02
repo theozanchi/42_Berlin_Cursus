@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2024/02/02 10:55:55 by tzanchi          ###   ########.fr        #
+#    Updated: 2024/02/02 11:08:08 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ OBJ_DIR		=	.o
 all:			${OBJ_DIR} ${NAME}
 
 ${NAME}:		entry_message ${OBJS}
-				@if [ -e ${NAME} ] && [ "$(shell find ${OBJ_DIR} -newer ${NAME})" = "" ]; then \
+				@if [ -e ${NAME} ] && [ "$(shell find ${OBJ_DIR} -newer ${NAME} 2>/dev/null)" = "" ]; then \
 					echo "Nothing to do"; \
 				else \
 					echo "${GREEN}DONE${NC}"; \
