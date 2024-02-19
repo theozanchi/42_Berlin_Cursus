@@ -6,7 +6,7 @@
 #    By: tzanchi <tzanchi@student.42berlin.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 13:32:19 by tzanchi           #+#    #+#              #
-#    Updated: 2024/02/02 11:08:08 by tzanchi          ###   ########.fr        #
+#    Updated: 2024/02/19 16:23:51 by tzanchi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,6 @@ SRCS		=	ft_isalpha.c \
 				ft_strdup.c \
 				ft_substr.c \
 				ft_strjoin.c \
-				ft_strjoin_h.c \
 				ft_strtrim.c \
 				ft_split.c \
 				ft_itoa.c \
